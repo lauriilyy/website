@@ -3,30 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>bis.tec — Premium IT für Ihr Unternehmen</title>
-  <meta name="description" content="IT, die Ihrem Unternehmen vorausdenkt. Ein Partner, der Ihre Systeme nicht nur betreut, sondern intelligent vernetzt.">
+  <title>bios-tec — IT, die Ihrem Unternehmen vorausdenkt.</title>
+  <meta name="description" content="Premium IT: IT-Sicherheit & Datenschutz, IT-Beratung & KI, Helpdesk. Ein Partner, der Ihre Systeme nicht nur betreut, sondern intelligent vernetzt.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- ============ HERO ============ -->
-  <header class="hero" id="top">
-    <!-- Floating pill nav -->
-    <nav class="hero__nav">
-      <a href="#top" class="hero__logo-link">
-        <img class="hero__logo" src="assets/bis_tec_logo.png" alt="bis.tec">
+  <!-- ============ FIXED NAV ============ -->
+  <header class="topbar" id="top">
+    <nav class="topbar__nav">
+      <a href="#top" class="topbar__logo-link" aria-label="bios-tec">
+        <img class="topbar__logo" src="assets/bis_tec_logo.png" alt="bios-tec">
       </a>
-
       <div class="nav-pill">
         <a class="nav-pill__link" href="#leistungen">Leistungen</a>
         <a class="nav-pill__link" href="#ueber-uns">Über uns</a>
         <a class="nav-pill__link" href="#referenzen">Referenzen</a>
         <a class="nav-pill__link" href="#faq">FAQ</a>
       </div>
-
-      <div class="hero__nav-right">
+      <div class="topbar__right">
         <a class="nav-contact" href="#kontakt">
           Kontakt
           <span class="nav-contact__icon" aria-hidden="true">→</span>
@@ -36,8 +33,6 @@
         </button>
       </div>
     </nav>
-
-    <!-- Mobile menu -->
     <div class="mobile-menu" id="mobile-menu" hidden>
       <a href="#leistungen">Leistungen</a>
       <a href="#ueber-uns">Über uns</a>
@@ -45,20 +40,46 @@
       <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
     </div>
+  </header>
 
-    <!-- Hero content -->
-    <div class="hero__content">
-      <div class="hero__inner">
+  <!-- ============ INTERACTIVE HERO SCENE (bios-Welt) ============ -->
+  <section class="scene" id="hero" aria-label="bios-Welt Hero">
+    <div class="scene__sticky">
+      <!-- Higgsfield poster / reduced-motion + first-paint fallback -->
+      <div class="scene__poster" id="scene-poster"></div>
+      <!-- WebGL canvas mounts here -->
+      <div class="scene__canvas" id="scene-canvas"></div>
+      <!-- vignette for text legibility -->
+      <div class="scene__vignette" aria-hidden="true"></div>
+
+      <!-- State A: headline overlay -->
+      <div class="scene__headline" id="scene-headline">
         <p class="hero__eyebrow">Premium IT für Ihr Unternehmen</p>
         <h1 class="hero__title">IT, die Ihrem Unternehmen vorausdenkt.</h1>
         <p class="hero__subtitle">Ein Partner, der Ihre Systeme nicht nur betreut, sondern intelligent vernetzt.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="#kontakt">Gespräch vereinbaren</a>
-          <a class="btn btn--secondary" href="#leistungen">Leistungen ansehen</a>
+        <div class="scene__scrollhint" aria-hidden="true">
+          <span>Scrollen</span>
+          <span class="scene__scrollhint-arrow">↓</span>
         </div>
       </div>
+
+      <!-- State C: pillar buttons (positioned over hubs by JS) -->
+      <div class="pillars" id="pillars" aria-hidden="true">
+        <button class="pillar" data-pillar="sicherheit" style="--accent:#B08D57">
+          <span class="pillar__label">IT-Sicherheit &amp; Datenschutz</span>
+          <span class="pillar__badge">Hier klicken →</span>
+        </button>
+        <button class="pillar" data-pillar="ki" style="--accent:#3FA9F5">
+          <span class="pillar__label">IT-Beratung &amp; KI</span>
+          <span class="pillar__badge">Hier klicken →</span>
+        </button>
+        <button class="pillar" data-pillar="helpdesk" style="--accent:#57B08D">
+          <span class="pillar__label">Helpdesk</span>
+          <span class="pillar__badge">Hier klicken →</span>
+        </button>
+      </div>
     </div>
-  </header>
+  </section>
 
   <main>
     <!-- ============ LEISTUNGEN ============ -->
@@ -66,40 +87,24 @@
       <div class="container">
         <div class="section__head">
           <p class="section__eyebrow">Leistungen</p>
-          <h2 class="section__title">Alles, was Ihre IT stark macht.</h2>
+          <h2 class="section__title">Drei Säulen, ein Partner.</h2>
           <p class="section__lead">Von der täglichen Betreuung bis zur strategischen Weiterentwicklung — wir decken die gesamte Bandbreite ab.</p>
         </div>
-
         <div class="cards">
-          <article class="card">
+          <article class="card" style="--accent:#B08D57">
             <div class="card__icon" aria-hidden="true">🛡️</div>
-            <h3 class="card__title">Managed IT &amp; Support</h3>
-            <p class="card__text">Proaktive Betreuung Ihrer gesamten Infrastruktur — Monitoring, Wartung und schneller Support, wenn es darauf ankommt.</p>
+            <h3 class="card__title">IT-Sicherheit &amp; Datenschutz</h3>
+            <p class="card__text">Mehrschichtige Sicherheitskonzepte und DSGVO-konformer Datenschutz, die Ihre Systeme zuverlässig schützen.</p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">☁️</div>
-            <h3 class="card__title">Cloud &amp; Infrastruktur</h3>
-            <p class="card__text">Skalierbare Cloud-Lösungen und moderne Netzwerke, die mit Ihrem Unternehmen mitwachsen.</p>
+          <article class="card" style="--accent:#3FA9F5">
+            <div class="card__icon" aria-hidden="true">🤖</div>
+            <h3 class="card__title">IT-Beratung &amp; KI</h3>
+            <p class="card__text">Strategische Beratung und KI-gestützte Lösungen, die Technologie an Ihren Geschäftszielen ausrichten.</p>
           </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🔒</div>
-            <h3 class="card__title">IT-Security</h3>
-            <p class="card__text">Mehrschichtige Sicherheitskonzepte, die Ihre Daten und Systeme zuverlässig schützen.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">⚙️</div>
-            <h3 class="card__title">Automatisierung</h3>
-            <p class="card__text">Wir vernetzen Ihre Systeme intelligent und automatisieren wiederkehrende Prozesse.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">📊</div>
-            <h3 class="card__title">IT-Beratung</h3>
-            <p class="card__text">Strategische Beratung, die Technologie an Ihren Geschäftszielen ausrichtet.</p>
-          </article>
-          <article class="card">
-            <div class="card__icon" aria-hidden="true">🚀</div>
-            <h3 class="card__title">Digitalisierung</h3>
-            <p class="card__text">Wir begleiten Sie auf dem Weg zu effizienteren, digitalen Arbeitsabläufen.</p>
+          <article class="card" style="--accent:#57B08D">
+            <div class="card__icon" aria-hidden="true">🎧</div>
+            <h3 class="card__title">Helpdesk</h3>
+            <p class="card__text">Schneller, persönlicher Support mit unter 30 Minuten Reaktionszeit — rund um die Uhr erreichbar.</p>
           </article>
         </div>
       </div>
@@ -115,22 +120,10 @@
           <a class="btn btn--secondary" href="#kontakt">Lernen Sie uns kennen</a>
         </div>
         <div class="stats">
-          <div class="stat">
-            <div class="stat__value">15+</div>
-            <div class="stat__label">Jahre Erfahrung</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">99,9 %</div>
-            <div class="stat__label">Verfügbarkeit</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">&lt; 30 min</div>
-            <div class="stat__label">Reaktionszeit</div>
-          </div>
-          <div class="stat">
-            <div class="stat__value">24/7</div>
-            <div class="stat__label">Monitoring</div>
-          </div>
+          <div class="stat"><div class="stat__value">15+</div><div class="stat__label">Jahre Erfahrung</div></div>
+          <div class="stat"><div class="stat__value">99,9 %</div><div class="stat__label">Verfügbarkeit</div></div>
+          <div class="stat"><div class="stat__value">&lt; 30 min</div><div class="stat__label">Reaktionszeit</div></div>
+          <div class="stat"><div class="stat__value">24/7</div><div class="stat__label">Monitoring</div></div>
         </div>
       </div>
     </section>
@@ -145,24 +138,15 @@
         <div class="quotes">
           <figure class="quote">
             <blockquote>„Seit der Zusammenarbeit läuft unsere IT einfach — und wir können uns auf unser Kerngeschäft konzentrieren."</blockquote>
-            <figcaption>
-              <span class="quote__name">Geschäftsführung</span>
-              <span class="quote__role">Mittelständisches Produktionsunternehmen</span>
-            </figcaption>
+            <figcaption><span class="quote__name">Geschäftsführung</span><span class="quote__role">Mittelständisches Produktionsunternehmen</span></figcaption>
           </figure>
           <figure class="quote">
             <blockquote>„Endlich ein Partner, der proaktiv denkt und Probleme löst, bevor sie entstehen."</blockquote>
-            <figcaption>
-              <span class="quote__name">IT-Leitung</span>
-              <span class="quote__role">Dienstleistungsbranche</span>
-            </figcaption>
+            <figcaption><span class="quote__name">IT-Leitung</span><span class="quote__role">Dienstleistungsbranche</span></figcaption>
           </figure>
           <figure class="quote">
             <blockquote>„Schnell, kompetent und immer erreichbar. Genau so stellt man sich IT-Betreuung vor."</blockquote>
-            <figcaption>
-              <span class="quote__name">Inhaber</span>
-              <span class="quote__role">Handel &amp; E-Commerce</span>
-            </figcaption>
+            <figcaption><span class="quote__name">Inhaber</span><span class="quote__role">Handel &amp; E-Commerce</span></figcaption>
           </figure>
         </div>
       </div>
@@ -176,22 +160,10 @@
           <h2 class="section__title">Häufige Fragen.</h2>
         </div>
         <div class="faq">
-          <details class="faq__item">
-            <summary>Für welche Unternehmensgrößen arbeiten Sie?</summary>
-            <p>Wir betreuen vor allem kleine und mittelständische Unternehmen — vom Team mit 10 Mitarbeitenden bis zum Konzern mit mehreren Standorten.</p>
-          </details>
-          <details class="faq__item">
-            <summary>Übernehmen Sie auch bestehende IT-Umgebungen?</summary>
-            <p>Ja. Wir analysieren Ihre bestehende Infrastruktur, übernehmen sie strukturiert und optimieren sie Schritt für Schritt.</p>
-          </details>
-          <details class="faq__item">
-            <summary>Wie schnell reagieren Sie bei Störungen?</summary>
-            <p>Unsere durchschnittliche Reaktionszeit liegt bei unter 30 Minuten. Kritische Systeme überwachen wir rund um die Uhr.</p>
-          </details>
-          <details class="faq__item">
-            <summary>Wie läuft die Zusammenarbeit ab?</summary>
-            <p>Wir starten mit einem unverbindlichen Gespräch, analysieren Ihre Anforderungen und erstellen ein passgenaues Konzept.</p>
-          </details>
+          <details class="faq__item"><summary>Für welche Unternehmensgrößen arbeiten Sie?</summary><p>Wir betreuen vor allem kleine und mittelständische Unternehmen — vom Team mit 10 Mitarbeitenden bis zum Konzern mit mehreren Standorten.</p></details>
+          <details class="faq__item"><summary>Übernehmen Sie auch bestehende IT-Umgebungen?</summary><p>Ja. Wir analysieren Ihre bestehende Infrastruktur, übernehmen sie strukturiert und optimieren sie Schritt für Schritt.</p></details>
+          <details class="faq__item"><summary>Wie schnell reagieren Sie bei Störungen?</summary><p>Unsere durchschnittliche Reaktionszeit liegt bei unter 30 Minuten. Kritische Systeme überwachen wir rund um die Uhr.</p></details>
+          <details class="faq__item"><summary>Wie läuft die Zusammenarbeit ab?</summary><p>Wir starten mit einem unverbindlichen Gespräch, analysieren Ihre Anforderungen und erstellen ein passgenaues Konzept.</p></details>
         </div>
       </div>
     </section>
@@ -206,7 +178,7 @@
             <input class="cta__input" type="email" placeholder="Ihre E-Mail-Adresse" aria-label="Ihre E-Mail-Adresse" required>
             <button class="btn btn--primary" type="submit">Gespräch vereinbaren</button>
           </form>
-          <p class="cta__note">Oder schreiben Sie uns direkt: <a href="mailto:hallo@bis-tec.de">hallo@bis-tec.de</a></p>
+          <p class="cta__note">Oder schreiben Sie uns direkt: <a href="mailto:hallo@bios-tec.de">hallo@bios-tec.de</a></p>
         </div>
       </div>
     </section>
@@ -216,7 +188,7 @@
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
-        <img class="hero__logo" src="assets/bis_tec_logo.png" alt="bis.tec">
+        <img class="topbar__logo" src="assets/bis_tec_logo.png" alt="bios-tec">
         <p>Premium IT für Ihr Unternehmen.</p>
       </div>
       <nav class="footer__nav" aria-label="Footer">
@@ -228,14 +200,61 @@
       </nav>
     </div>
     <div class="container footer__bottom">
-      <span>© 2026 bis.tec. Alle Rechte vorbehalten.</span>
-      <span class="footer__legal">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-      </span>
+      <span>© 2026 bios-tec. Alle Rechte vorbehalten.</span>
+      <span class="footer__legal"><a href="#">Impressum</a><a href="#">Datenschutz</a></span>
     </div>
   </footer>
 
+  <!-- ============ PILLAR SUBPAGE OVERLAY (zoom-in) ============ -->
+  <div class="subpage" id="subpage" hidden>
+    <div class="subpage__scaler" id="subpage-scaler">
+      <div class="subpage__inner">
+        <button class="subpage__back" id="subpage-back">← Zurück</button>
+        <div class="subpage__body" id="subpage-body"><!-- filled by JS --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subpage content templates -->
+  <template id="tpl-sicherheit">
+    <p class="subpage__eyebrow" style="color:#B08D57">IT-Sicherheit &amp; Datenschutz</p>
+    <h2 class="subpage__title">Schutz, der mitdenkt.</h2>
+    <p class="subpage__lead">Mehrschichtige Sicherheit von der Firewall bis zur Awareness-Schulung. Wir schließen Lücken, bevor sie zum Risiko werden — und halten Ihre Daten DSGVO-konform.</p>
+    <ul class="subpage__list">
+      <li>Endpoint- &amp; Netzwerk-Security</li>
+      <li>Backup- &amp; Notfallkonzepte</li>
+      <li>Datenschutz &amp; DSGVO-Beratung</li>
+      <li>Security-Audits &amp; Monitoring</li>
+    </ul>
+    <a class="btn btn--primary" href="#kontakt" data-close>Gespräch vereinbaren</a>
+  </template>
+  <template id="tpl-ki">
+    <p class="subpage__eyebrow" style="color:#3FA9F5">IT-Beratung &amp; KI</p>
+    <h2 class="subpage__title">Strategie trifft Intelligenz.</h2>
+    <p class="subpage__lead">Wir richten Ihre IT an Ihren Zielen aus und heben mit KI-gestützten Prozessen Potenziale, die manuell verborgen bleiben.</p>
+    <ul class="subpage__list">
+      <li>IT-Strategie &amp; Roadmaps</li>
+      <li>Prozessautomatisierung</li>
+      <li>KI-Integration &amp; Datenanalyse</li>
+      <li>Cloud- &amp; Infrastruktur-Beratung</li>
+    </ul>
+    <a class="btn btn--primary" href="#kontakt" data-close>Gespräch vereinbaren</a>
+  </template>
+  <template id="tpl-helpdesk">
+    <p class="subpage__eyebrow" style="color:#57B08D">Helpdesk</p>
+    <h2 class="subpage__title">Immer erreichbar. Immer schnell.</h2>
+    <p class="subpage__lead">Ein fester Ansprechpartner, unter 30 Minuten Reaktionszeit und ein Team, das Ihre Umgebung kennt. Support, wie er sein sollte.</p>
+    <ul class="subpage__list">
+      <li>Persönlicher First- &amp; Second-Level-Support</li>
+      <li>Reaktionszeit &lt; 30 Minuten</li>
+      <li>24/7 Monitoring kritischer Systeme</li>
+      <li>Proaktive Wartung</li>
+    </ul>
+    <a class="btn btn--primary" href="#kontakt" data-close>Gespräch vereinbaren</a>
+  </template>
+
+  <!-- Libraries: only loaded when motion is allowed (see hero.js) -->
   <script src="js/main.js"></script>
+  <script type="module" src="js/hero.js"></script>
 </body>
 </html>
