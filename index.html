@@ -11,10 +11,13 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <section class="hero">
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
     <!-- Floating pill nav -->
     <nav class="hero__nav">
-      <img class="hero__logo" src="assets/bis_tec_logo.png" alt="bis.tec">
+      <a href="#top" class="hero__logo-link">
+        <img class="hero__logo" src="assets/bis_tec_logo.png" alt="bis.tec">
+      </a>
 
       <div class="nav-pill">
         <a class="nav-pill__link" href="#leistungen">Leistungen</a>
@@ -23,27 +26,216 @@
         <a class="nav-pill__link" href="#faq">FAQ</a>
       </div>
 
-      <a class="nav-contact" href="#kontakt">
-        Kontakt
-        <span class="nav-contact__icon" aria-hidden="true">→</span>
-      </a>
+      <div class="hero__nav-right">
+        <a class="nav-contact" href="#kontakt">
+          Kontakt
+          <span class="nav-contact__icon" aria-hidden="true">→</span>
+        </a>
+        <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#referenzen">Referenzen</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
 
     <!-- Hero content -->
     <div class="hero__content">
       <div class="hero__inner">
         <p class="hero__eyebrow">Premium IT für Ihr Unternehmen</p>
-
         <h1 class="hero__title">IT, die Ihrem Unternehmen vorausdenkt.</h1>
-
         <p class="hero__subtitle">Ein Partner, der Ihre Systeme nicht nur betreut, sondern intelligent vernetzt.</p>
-
         <div class="hero__actions">
           <a class="btn btn--primary" href="#kontakt">Gespräch vereinbaren</a>
           <a class="btn btn--secondary" href="#leistungen">Leistungen ansehen</a>
         </div>
       </div>
     </div>
-  </section>
+  </header>
+
+  <main>
+    <!-- ============ LEISTUNGEN ============ -->
+    <section class="section" id="leistungen">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Leistungen</p>
+          <h2 class="section__title">Alles, was Ihre IT stark macht.</h2>
+          <p class="section__lead">Von der täglichen Betreuung bis zur strategischen Weiterentwicklung — wir decken die gesamte Bandbreite ab.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🛡️</div>
+            <h3 class="card__title">Managed IT &amp; Support</h3>
+            <p class="card__text">Proaktive Betreuung Ihrer gesamten Infrastruktur — Monitoring, Wartung und schneller Support, wenn es darauf ankommt.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">☁️</div>
+            <h3 class="card__title">Cloud &amp; Infrastruktur</h3>
+            <p class="card__text">Skalierbare Cloud-Lösungen und moderne Netzwerke, die mit Ihrem Unternehmen mitwachsen.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🔒</div>
+            <h3 class="card__title">IT-Security</h3>
+            <p class="card__text">Mehrschichtige Sicherheitskonzepte, die Ihre Daten und Systeme zuverlässig schützen.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">⚙️</div>
+            <h3 class="card__title">Automatisierung</h3>
+            <p class="card__text">Wir vernetzen Ihre Systeme intelligent und automatisieren wiederkehrende Prozesse.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">📊</div>
+            <h3 class="card__title">IT-Beratung</h3>
+            <p class="card__text">Strategische Beratung, die Technologie an Ihren Geschäftszielen ausrichtet.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">🚀</div>
+            <h3 class="card__title">Digitalisierung</h3>
+            <p class="card__text">Wir begleiten Sie auf dem Weg zu effizienteren, digitalen Arbeitsabläufen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ÜBER UNS ============ -->
+    <section class="section" id="ueber-uns">
+      <div class="container about">
+        <div class="about__text">
+          <p class="section__eyebrow">Über uns</p>
+          <h2 class="section__title">Ein Partner, kein Dienstleister.</h2>
+          <p class="section__lead">Wir verstehen IT nicht als Kostenstelle, sondern als Hebel für Ihren Erfolg. Deshalb denken wir vom ersten Tag an mit — persönlich, verlässlich und mit einem klaren Blick nach vorn.</p>
+          <a class="btn btn--secondary" href="#kontakt">Lernen Sie uns kennen</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__value">15+</div>
+            <div class="stat__label">Jahre Erfahrung</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">99,9 %</div>
+            <div class="stat__label">Verfügbarkeit</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">&lt; 30 min</div>
+            <div class="stat__label">Reaktionszeit</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value">24/7</div>
+            <div class="stat__label">Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REFERENZEN ============ -->
+    <section class="section" id="referenzen">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__eyebrow">Referenzen</p>
+          <h2 class="section__title">Was unsere Kunden sagen.</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>„Seit der Zusammenarbeit läuft unsere IT einfach — und wir können uns auf unser Kerngeschäft konzentrieren."</blockquote>
+            <figcaption>
+              <span class="quote__name">Geschäftsführung</span>
+              <span class="quote__role">Mittelständisches Produktionsunternehmen</span>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>„Endlich ein Partner, der proaktiv denkt und Probleme löst, bevor sie entstehen."</blockquote>
+            <figcaption>
+              <span class="quote__name">IT-Leitung</span>
+              <span class="quote__role">Dienstleistungsbranche</span>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>„Schnell, kompetent und immer erreichbar. Genau so stellt man sich IT-Betreuung vor."</blockquote>
+            <figcaption>
+              <span class="quote__name">Inhaber</span>
+              <span class="quote__role">Handel &amp; E-Commerce</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <p class="section__eyebrow">FAQ</p>
+          <h2 class="section__title">Häufige Fragen.</h2>
+        </div>
+        <div class="faq">
+          <details class="faq__item">
+            <summary>Für welche Unternehmensgrößen arbeiten Sie?</summary>
+            <p>Wir betreuen vor allem kleine und mittelständische Unternehmen — vom Team mit 10 Mitarbeitenden bis zum Konzern mit mehreren Standorten.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Übernehmen Sie auch bestehende IT-Umgebungen?</summary>
+            <p>Ja. Wir analysieren Ihre bestehende Infrastruktur, übernehmen sie strukturiert und optimieren sie Schritt für Schritt.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Wie schnell reagieren Sie bei Störungen?</summary>
+            <p>Unsere durchschnittliche Reaktionszeit liegt bei unter 30 Minuten. Kritische Systeme überwachen wir rund um die Uhr.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Wie läuft die Zusammenarbeit ab?</summary>
+            <p>Wir starten mit einem unverbindlichen Gespräch, analysieren Ihre Anforderungen und erstellen ein passgenaues Konzept.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ KONTAKT ============ -->
+    <section class="section section--cta" id="kontakt">
+      <div class="container">
+        <div class="cta">
+          <h2 class="cta__title">Bereit für IT, die vorausdenkt?</h2>
+          <p class="cta__text">Vereinbaren Sie ein unverbindliches Erstgespräch — wir freuen uns auf Sie.</p>
+          <form class="cta__form" onsubmit="return false;">
+            <input class="cta__input" type="email" placeholder="Ihre E-Mail-Adresse" aria-label="Ihre E-Mail-Adresse" required>
+            <button class="btn btn--primary" type="submit">Gespräch vereinbaren</button>
+          </form>
+          <p class="cta__note">Oder schreiben Sie uns direkt: <a href="mailto:hallo@bis-tec.de">hallo@bis-tec.de</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img class="hero__logo" src="assets/bis_tec_logo.png" alt="bis.tec">
+        <p>Premium IT für Ihr Unternehmen.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#referenzen">Referenzen</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 bis.tec. Alle Rechte vorbehalten.</span>
+      <span class="footer__legal">
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
